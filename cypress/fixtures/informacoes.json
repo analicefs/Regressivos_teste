@@ -1,0 +1,9 @@
+
+    // cy.get('#adopt-accept-all-button').click({ force: true })
+    
+    // cy.contains('.easy_participate_desktop > .container > .bounceInDown', 'É SUUUPER FÁCIL PARTICIPAR')
+
+    // cy.visit('promo.pepsi.com.br/home')
+        // cy.get('#adopt-accept-all-button').click({ force: true })
+    // cy.visit('https://www-hml.pepsicoito.com.br/resgatar')
+    // cy.contains('.easy_participate_desktop > .container > .bounceInDown', 'É SUUUPER FÁCIL PARTICIPAR')

@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
-describe('Abrir página vida', function () {
+describe('Teste de cadastro Allianz Palmeiras vida', function () {
   it('Fazer login', function () {
-    cy.visit('https://cote-allianz-integrada.valide.vc/palmeiras/vida')
+    cy.visit('https://cote.allianz.com.br/palmeiras/vida')
     cy.closecookies()
 
   })

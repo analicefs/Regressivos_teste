@@ -1,15 +1,15 @@
 {
   "name": "curso-cypress-v2",
   "version": "1.0.0",
-  "description": "Repositório da versão 2 do curso básico de Cypress da Escola Talking About Testing",
+  "description": "Teste regressivo Alianz",
   "main": "src/index.html",
-"scripts": {
-  "cy:open": "cypress open",
-  "test": "cypress run"
-},
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wlsf82/cypress-basico-v2.git"
+    "url": "git+https://git.catskillet.com/AnaSantos/alianz.git"
   },
   "keywords": [
     "Testing",
@@ -18,10 +18,11 @@
     "Cypress Básico",
     "Escola TAT"
   ],
-  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "author": "ana.sa@gmail.com",
   "license": "MIT",
-  "homepage": "https://github.com/wlsf82/cypress-basico-v2#readme",
-  "devDependencies": {
-    "cypress": "^9.5.1"
-  }
+  "homepage": "https://git.catskillet.com/AnaSantos/alianz.git#readme",
+"devDependencies": {
+  "cypress": "^8.3.1",
+  "faker": "^5.5.3"
+}
 }

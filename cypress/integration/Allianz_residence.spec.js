@@ -1,8 +1,8 @@
 /// <reference types="Cypress" />
 
-describe('Abrir página vida', function () {
+describe('Teste de cadastro Allianz Residência', function () {
   it('Fazer login', function () {
-    cy.visit('https://cote-allianz-integrada.valide.vc/residencia')
+    cy.visit('https://cote.allianz.com.br/residencia')
     cy.closecookies()
 
   })
