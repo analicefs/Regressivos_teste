@@ -5,8 +5,11 @@
   "main": "src/index.html",
   "scripts": {
     "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
+    "cy:mobile": "cypress run --config viewportWidth=410 viewportHeight=860",
     "test": "cypress run"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://git.catskillet.com/AnaSantos/alianz.git"

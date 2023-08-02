@@ -1,21 +1,17 @@
 /// <reference types="Cypress" />
 
 describe('Abrir home Everest ', function () {
-  it.only('Validar se a home está em Espanhol carrossel e produtos', function () {
+  it('Validar se a home está em Espanhol carrossel e produtos', function () {
     cy.visit('https://everest.ind.br/es/home')
-    cy.contains(':nth-child(1) > .card > .card__body','Água cristalina e livre de impurezas, como toda água deve ser.')
-    cy.contains(':nth-child(2) > .card > .card__body', 'Hidratação, refrescância e bem-estar a um giro de você.')
-    cy.contains(':nth-child(3) > .card > .card__body', 'Estilo e versatilidade que combinam em todos os espaços.')
-    cy.contains(':nth-child(4) > .card > .card__body', 'Alta eficiência e baixo consumo de energia.')
-    cy.contains('p[_ngcontent-serverapp-c45=""] > p', 'Água cristalina e gelada para até 15 pessoas por hora.')
-    cy.contains('p[_ngcontent-serverapp-c45=""] > p', 'Temperatura do jeito que você preferir: natural, geladinha ou misturada.')
-    cy.contains('.slick-current > app-card > .product-item > p', 'Água pura e geladinha para até 15 pessoas por hora')
-    cy.contains('[data-slick-index="1"] > app-card > .product-item > p','Água pura e geladinha para até 15 pessoas por hora')
-    cy.contains('[data-slick-index="2"] > app-card > .product-item > p', 'Água pura e geladinha para até 15 pessoas por hora')
-    cy.contains('[data-slick-index="3"] > app-card > .product-item > p', 'Água pura e geladinha para até 30 pessoas por hora')
-    cy.contains('[data-slick-index="4"] > app-card > .product-item > p', 'Água pura e cristalina em temperatura ambiente')
-    cy.contains('.item1 > .post > .container > .post-blog > .card-position > .card > .card-body > .body1 > p', 'Há mais de 50 anos, a Everest leva bem-estar e qualidade de')
-    cy.contains('.item2 > .post > .container > .post-blog > .card-position > .card > .card-body > .body1 > p', 'A Everest acredita que sua longevidade e garantia de qualidade lá no alto só são possíveis graças às boas práticas')
+    cy.contains(':nth-child(1) > .card > .card__body','Agua cristalina, libre de impurezas, como debe ser toda agua.')
+    cy.contains(':nth-child(2) > .card > .card__body', 'Hidratación, frescor y bienestar al alcance de la mano.')
+    cy.contains(':nth-child(3) > .card > .card__body', 'Estilo y versatilidad que combinan con todos los espacios.')
+    cy.contains(':nth-child(4) > .card > .card__body', 'Alta eficiencia y bajo consumo de energía.')
+    cy.contains('.slick-current > app-card > .product-item > p', 'Agua pura y bien fría')
+    cy.contains('[data-slick-index="1"] > app-card > .product-item > p','Agua pura y bien fría')
+    cy.contains('[data-slick-index="2"] > app-card > .product-item > p', 'Agua pura y bien fría')
+    cy.contains('[data-slick-index="3"] > app-card > .product-item > p', 'Agua pura y bien fría')
+    cy.contains('[data-slick-index="4"] > app-card > .product-item > p', 'Agua pura y cristalina')
 
     // cy.closecookies()
 
@@ -24,9 +20,10 @@ describe('Abrir home Everest ', function () {
 
   it('Cadastro de revendedor', function () {
     cy.visit('https://everest.ind.br/es/seja-revendedor')
+    cy.contains('.body1','Al convertirse en distribuidor de Everest, adquiere autoridad en materia de salud y')
     cy.get('#i-revenda-city').click({ force: true })
     cy.get('#i-revenda-full_name').type('Maria Teste', { force: true } )
-    cy.get('#i-revenda-cpf').type('01357641303', { force: true })
+    cy.get('#i-revenda-_id').type('55555555555', { force: true })
     cy.get('#i-revenda-phone').type('859911619407')
     cy.get('#i-revenda-email').type('analicef87@gmail.com', {force:true})
     cy.get('#i-revenda-state').type('Ceará', { force: true })
@@ -34,15 +31,15 @@ describe('Abrir home Everest ', function () {
     cy.get('.active > [type="button"] > app-mybutton > a > .button').click({ force: true })
     
     cy.get('#i-revenda-business_type').type('Tester', { force: true })
-    cy.get('.ng-touched > #revenda-has_company').select('Sim', { force: true })
+    cy.get('.ng-touched > #revenda-has_company').select('Sí', { force: true })
     cy.get('#i-revenda-social_reason').type('TESTER MARIA', { force: true })
     cy.get('#i-revenda-fantasy_name').type('Tester', { force: true })
-    cy.get('#i-revenda-cnpj_state_registration').type('49792664000120', { force: true })
+    cy.get('#i-revenda-ruc').type('49792664000120', { force: true })
     cy.get('#i-revenda-business_address').type('Rua dos Poetas', { force: true })
     cy.get('.active > [type="button"] > app-mybutton > a > .button').click({ force: true })
 
-    cy.get('#i-revenda-business_experience').type('sim, quatro anos', { force: true })
-    cy.get('.ng-touched > #revenda-is_water_tracking').select('Não', { force: true })
+    cy.get('#i-revenda-business_experience').type('4', { force: true })
+    cy.get('.ng-touched > #revenda-is_water_tracking').select('No', { force: true })
     cy.get('#i-revenda-brands').type('Everest Plus', { force: true })
     cy.get('.active > [type="button"] > app-mybutton > a > .button').click({ force: true })
 
@@ -55,13 +52,12 @@ describe('Abrir home Everest ', function () {
 
     cy.get('#i-revenda-other_products').type('Não', { force: true })
     cy.get('.ng-dirty > #revenda-investment_availability').select(1, { force: true })
-    // cy.get('#i-revenda-investment_availability').type('85555555555555', { force: true })
     cy.get('#i-revenda-meet_us').type('sim', { force: true })
     cy.get('[type="submit"] > app-mybutton > a > .button').click({ force: true })
 
     
-  cy.contains('.desc > .ng-star-inserted','Sua solicitação está em análise e, em breve, um de nossos especialistas entrará em contato.', {force:true})
-  cy.get('.ng-star-inserted > .button').click
+    cy.contains('.desc > .ng-star-inserted','Su solicitud está siendo analizada y uno de nuestros expertos se pondrá en contacto con usted en breve.', {force:true})
+    cy.get('.ng-star-inserted > .button').click()
 })
 
 

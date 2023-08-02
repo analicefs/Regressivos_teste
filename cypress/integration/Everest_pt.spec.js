@@ -27,7 +27,7 @@ describe('Abrir home Everest ', function () {
     cy.get('#i-revenda-city').click({ force: true })
     cy.get('#i-revenda-full_name').type('Maria Teste', { force: true } )
     cy.get('#i-revenda-cpf').type('01357641303', { force: true })
-    cy.get('#i-revenda-phone').type('859911619407')
+    cy.get('#i-revenda-phone').type('859918619407')
     cy.get('#i-revenda-email').type('analicef87@gmail.com', {force:true})
     cy.get('#i-revenda-state').type('Ceará', { force: true })
     cy.get('#i-revenda-city').type('Ocara', { force: true } )
@@ -184,7 +184,7 @@ it('Cadastro de Exportação  ', function () {
     cy.get('.button > span').click()
 
   })
-  it.only('Abrir revendedor autorizado e fazer pesquisa', function () {
+  it('Abrir revendedor autorizado e fazer pesquisa', function () {
     cy.visit('https://everest.ind.br/pt/revenda')
     cy.get('form.ng-untouched > .ng-untouched').type('55555555')
     cy.contains('.adresses','Y.A CARDOSO FILTROS EIRELI')
@@ -207,8 +207,8 @@ it('Cadastro de Exportação  ', function () {
   it('Abrir sustentabilidade ', function () {
     cy.visit('https://everest.ind.br/pt/sustentabilidade')
     cy.contains('.desc-title', 'Descarte consciente')
-    cy.get('.button > span').click()
     cy.contains('b', 'Logística e manufatura reversas')
+    cy.get('.button  span').invoke('removeAttr','target').click()
     })
 
   it('Abrir dúvidas', function () {
@@ -270,7 +270,7 @@ it('Cadastro de Exportação  ', function () {
 
     })
 
-  it.only('Verificar maquina de gelo , se está em português e se está com as familias corretas', function () {
+  it('Verificar maquina de gelo , se está em português e se está com as familias corretas', function () {
     cy.visit('https://everest.ind.br/pt/produto/maquinas-de-gelo')
     cy.contains('h1 > p','Máquinas de Gelo')
     cy.contains('h2 > p','A melhor solução em')

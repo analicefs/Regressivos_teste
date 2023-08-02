@@ -7,3 +7,13 @@
         // cy.get('#adopt-accept-all-button').click({ force: true })
     // cy.visit('https://www-hml.pepsicoito.com.br/resgatar')
     // cy.contains('.easy_participate_desktop > .container > .bounceInDown', 'É SUUUPER FÁCIL PARTICIPAR')
+
+    // cypress config 
+    
+    
+// {
+//   "viewportwidth": 375,
+//  "viewportHeight": 667
+// }
+
+// cypress open --config viewportWidth=370, viewportHeight=660

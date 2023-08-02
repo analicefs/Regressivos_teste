@@ -77,6 +77,8 @@ describe('Testes Pepsi  Produção', function () {
     
   })
   
+  
+
   it('Logout', function () {
     cy.visit('promo.pepsi.com.br/home')
     cy.get('.header__buttons > .salutation').click()
